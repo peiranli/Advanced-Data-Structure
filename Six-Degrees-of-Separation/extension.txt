@@ -1,0 +1,21 @@
+With the extension file we create, we can take a list of friendship relationship
+from facebook user databse as the resource file. With that file, we can find out
+the number of common friends between any two users that are in the input file.
+If any of the input user is not in the resource file, a error message will be 
+print.
+To solve this problem, we first created a user class that has a uid and a 
+friend_list hashmap. It is enough to represent a facebook user with this class.
+In the main method of extention, first we have the loadFromFile method. It takes
+the resource file and form a global user_list hashmap. After that, every users'
+friend list will be filled. Then we will find the two users from input and get 
+their friend_lists. Compare their friend_lists to see how many overlappings
+they have.
+For the test part, we made up several different inputs of the resource files and
+input uids. We finally made all of the test case passed.
+
+To test the extension file, u just type in the terminal:
+	make extension
+Then u just type:
+	./extension extension_input.tsv test_extension.tsv out_extension.tsv
+
+The link of the test dataset is:
